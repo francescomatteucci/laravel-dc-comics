@@ -10,6 +10,12 @@
     <img src="{{ $comic->thumb }}" width="200" alt="">
     <div>{{ $comic->price}}</div>
     <div>{{ $comic->series }}</div>
+    <button class="btn btn-success"><a href="{{ route('comics.edit', $comic) }}">Modifica</a></button>
+    <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+        @method('DELETE')
+        @csrf
+        <button class="btn btn-danger">Elimina</button>
+    </form>
 </div>
 @endforeach
 @endsection

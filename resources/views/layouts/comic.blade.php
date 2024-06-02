@@ -10,6 +10,6 @@
     <div>{{ $comic->series }}</div>
     <div>{{ $comic->sale_date }}</div>
     <div>{{ $comic->type }}</div>
-
+    <button class="btn btn-success"><a href="{{ route('comics.edit', $comic) }}">Modifica</a></button>
 </div>
 @endsection
